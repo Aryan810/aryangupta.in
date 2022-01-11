@@ -12,14 +12,13 @@
 }
 
 .menu{
-  background-color: rgb(173, 155, 155);
-  width: 30vw;
+  background-color: rgb(78, 199, 189);
+  width: 175px;
   height: 100vh;
 }
 
 .menu ul{
-  width: 100vw;
-  padding: 0px 0px 0px 1vw;
+  width: 95px;
   list-style: none;
   height: 100vh;
 }
@@ -31,44 +30,66 @@
 }
 
 .infoContainer{
-  width: 70vw;
+  width: 85vw;
   height: 100vh;
   justify-content: center;
-  background-color: rgba(154, 156, 158, 0.473)
+  background-color: rgba(110, 8, 194, 0.432)
 }
 
 .infoarea{
   display: flex;
   height: 90vh;
-  width: 55vw;
+  width: 70vw;
   margin: 17vh;
   justify-content: space-around;
 
 }
 
 .info{
-  width: 50vw;
+  width: 60vw;
 }
 
 .mypic img{
   width: 20vw;
+  display: inline-block;
+  border: 2px solid rgba(104, 15, 139, 0.514);
+  border-radius: 5px;
 }
 
 
 #name{
   font-family: 'Roboto Slab', serif;
-  font-size: 3.5em;
+  font-size: 3.7em;
 }
 
 #hiiam{
   margin-top: 10vh;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 2.1em;
+  font-size: 2.6em;
 }
 
 #whatiam{
   margin-top: 10px;
   font-family: 'Barlow Condensed', sans-serif;
-  font-size: 1.6em;
+  font-size: 1.79em;
 }
 
+
+@media screen and (max-width: 800px){
+  /* *{
+    background-color: rgb(240, 116, 116);
+  } */
+  .infoarea{
+    flex-wrap: wrap;
+  }
+  .menu{
+    position: absolute;
+    transform: translate(-200px);
+  }
+  .infoContainer{
+    width: 100vw;
+  }
+  .mypic img{
+    width: 30vw;
+  }
+}
