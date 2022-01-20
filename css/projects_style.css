@@ -10,14 +10,13 @@
 }
 
 body{
-    background-image: linear-gradient('-132deg', rgba(168, 51, 192, 0.562) 40%, rgba(51, 181, 204, 0.822));
+    background-image: linear-gradient(to right , rgba(229, 233, 32, 0.849), 20%, #33eb5b9d, 76%  , rgba(200, 37, 233, 0.562));
 }
 
 
 .home{
     position: absolute;
     width: fit-content;
-    background-color: transparent;
     margin: 5px 8px;
 }
 
@@ -28,6 +27,7 @@ body{
     color: rgb(46, 41, 41);
     border-radius: 4px;
     padding: 3px;
+    background-color: transparent;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
 }
@@ -51,7 +51,7 @@ body{
 
 
 .title{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Nunito', sans-serif;
     background-color: transparent;
     border: 1px solid black;
     padding: 0px 5px;
