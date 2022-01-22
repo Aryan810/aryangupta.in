@@ -9,10 +9,44 @@
     margin: 0px 0px;
 }
 
-body{
-    background-image: linear-gradient(to right , rgba(229, 233, 32, 0.849), 20%, #33eb5b9d, 76%  , rgba(200, 37, 233, 0.562));
+
+/*                                                 |Animations|                                                    */
+@keyframes shadow-show{
+    from{box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.2);}
+    to{box-shadow: 0px 8px 16px 0px rgba(26, 25, 25, 0.555);}
 }
 
+@keyframes shadow-back{
+    from{box-shadow: 0px 8px 16px 0px rgba(26, 25, 25, 0.555);}
+    to{box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.2);}
+}
+
+@keyframes white-to-grey{
+    from{
+        background-color: ghostwhite; 
+        color: rgb(46, 41, 41);
+    }
+    to{
+        background-color: rgba(209, 205, 205, 0.767);
+        color: black;
+    }
+}
+
+
+@keyframes grey-to-white{
+    from{
+        background-color: rgba(209, 205, 205, 0.767);
+        color: black;
+    }
+    to{
+        background-color: ghostwhite; 
+        color: rgb(46, 41, 41);
+    }
+}
+
+body{
+    background-color: ghostwhite;
+}
 
 .home{
     position: absolute;
@@ -20,22 +54,26 @@ body{
     margin: 5px 8px;
 }
 
-.home_text{
+.home_text {
     width: fit-content;
     border: 1px solid rgb(22, 22, 22);
     font-size: 1.3em;
     color: rgb(46, 41, 41);
     border-radius: 4px;
     padding: 3px;
-    background-color: transparent;
+    background-color: ghostwhite;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
+    animation: grey-to-white;
+    animation-duration: 1s;
 }
 
-.home_text:hover{
-    color: ghostwhite;
+.home_text:hover {
+    color: rgb(0, 0, 0);
     border: 1px solid rgb(46, 41, 41);
-    background-color: rgb(22, 22, 22);
+    animation: white-to-grey;
+    animation-duration: 1s;
+    background-color: rgba(209, 205, 205, 0.767);
 }
 
 .header{
@@ -58,7 +96,6 @@ body{
     text-decoration: underline;
     border-radius: 5px;
     font-size: 2.7em;
-    
 }
 
 .cards{
@@ -79,8 +116,18 @@ body{
     border: 2px solid grey;
     width: 30vw;
     margin: 5px 20px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px rgba(116, 113, 113, 0.2);
+    animation: shadow-back;
+    animation-duration: 1s;
     height: fit-content;
+    background-color: rgba(209, 205, 205, 0.466);
+}
+
+.card:hover{
+    box-shadow: 0px 8px 16px 0px rgba(41, 39, 39, 0.555);
+    animation: shadow-show;
+    animation-duration: 1s;
+    
 }
 
 .cardcontent{
@@ -172,8 +219,8 @@ body{
     color: black;
     padding: 12px 16px;
     text-decoration: none;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 1.1em;
+    font-family: 'Nunito', sans-serif;
+    font-size: 0.96em;
     display: block;
   }
   

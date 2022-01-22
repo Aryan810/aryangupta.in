@@ -5,19 +5,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="media/img/aryan.png">
     <title>Unavailable - AryanGupta.in</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap');
 
-        *{
+        * {
             margin: 0px 0px;
+        }
+
+        /*                                                 |Animations|                                                    */
+        @keyframes shadow-show {
+            from {
+                box-shadow: 1px 8px 16px 1px rgba(116, 113, 113, 0.2);
+            }
+
+            to {
+                box-shadow: 1px 8px 16px 1px rgba(26, 25, 25, 0.555);
+            }
+        }
+
+        @keyframes shadow-back {
+            from {
+                box-shadow: 1px 8px 16px 1px rgba(26, 25, 25, 0.555);
+            }
+
+            to {
+                box-shadow: 1px 8px 16px 1px rgba(116, 113, 113, 0.2);
+            }
+        }
+
+        @keyframes white-to-grey {
+            from {
+                background-color: ghostwhite;
+                color: rgb(46, 41, 41);
+            }
+
+            to {
+                background-color: rgba(209, 205, 205, 0.767);
+                color: black;
+            }
+        }
+
+
+        @keyframes grey-to-white {
+            from {
+                background-color: rgba(209, 205, 205, 0.767);
+                color: black;
+            }
+
+            to {
+                background-color: ghostwhite;
+                color: rgb(46, 41, 41);
+            }
         }
 
         .home {
             position: absolute;
             width: fit-content;
             background-color: transparent;
-            margin: 5px 8px;
+            margin: 8px 6px;
         }
 
         .home_text {
@@ -27,42 +74,84 @@
             color: rgb(46, 41, 41);
             border-radius: 4px;
             padding: 3px;
+            background-color: ghostwhite;
+            text-decoration: none;
             font-family: 'Nunito', sans-serif;
+            animation: grey-to-white;
+            animation-duration: 1s;
         }
 
         .home_text:hover {
-            color: ghostwhite;
+            color: rgb(0, 0, 0);
             border: 1px solid rgb(46, 41, 41);
-            background-color: rgb(22, 22, 22);
+            animation: white-to-grey;
+            animation-duration: 1s;
+            background-color: rgba(209, 205, 205, 0.767);
         }
 
         .bg {
             width: 100vw;
             height: 100vh;
             display: flex;
-            background-color: cyan;
+            flex-wrap: wrap;
+            margin: 0px 10px;
+            background-color: ghostwhite;
             vertical-align: middle;
         }
 
         .text {
             color: rgb(46, 43, 43);
-            background-color: transparent;
+            background-color: rgba(185, 179, 179, 0.521);
             font-family: 'Nunito', sans-serif;
             width: fit-content;
+            height: fit-content;
+            border-radius: 10px;
             padding: 1px 5vw;
-            text-decoration: underline;
+            text-decoration: none;
             margin: auto;
             font-size: 3.1em;
+            box-shadow: 1px 8px 16px 1px rgba(116, 113, 113, 0.2);
+            animation: shadow-back;
+            animation-duration: 1s;
+        }
+
+        .text:hover {
+            box-shadow: 1px 8px 16px 1px rgba(41, 39, 39, 0.555);
+            animation: shadow-show;
+            animation-duration: 1s;
+        }
+
+        .error_div {
+            width: 100vw;
+            margin-top: 20px;
+            display: flex;
+        }
+
+        .error_img_div {
+            width: fit-content;
+            height: fit-content;
+            margin: auto;
+            vertical-align: middle;
+        }
+
+        #img-error {
+            height: 30vh;
         }
     </style>
 </head>
 
 <body>
     <div class="home">
-        <h3><a class="home_text" href="https://aryan810.github.io/aryangupta.in/index.html" target="_blank">Home</a></h3>
+        <h3><a class="home_text" href="https://aryan810.github.io/aryangupta.in/index.html" target="_blank">Home</a>
+        </h3>
     </div>
     <div class="bg">
-        <h1 class="text">Sorry, Your desired file will be available soon...</h1>
+        <div class="error_div">
+            <div class="error_img_div">
+                <img id="img-error" src="media/ico/error.png">
+            </div>
+        </div>
+        <h1 class="text">Sorry, Your desired file is not available.<br>File will be available soon...</h1>
     </div>
 </body>
 
