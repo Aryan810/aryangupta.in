@@ -23,11 +23,11 @@
 
 @keyframes white-to-grey{
     from{
-        background-color: ghostwhite; 
+        background-color: transparent; 
         color: rgb(46, 41, 41);
     }
     to{
-        background-color: rgba(209, 205, 205, 0.767);
+        background-color: rgba(33, 240, 161, 0.767);
         color: black;
     }
 }
@@ -35,17 +35,17 @@
 
 @keyframes grey-to-white{
     from{
-        background-color: rgba(209, 205, 205, 0.767);
+        background-color: rgba(33, 240, 161, 0.767);
         color: black;
     }
     to{
-        background-color: ghostwhite; 
+        background-color: transparent; 
         color: rgb(46, 41, 41);
     }
 }
 
 body{
-    background-color: ghostwhite;
+    background-image: linear-gradient(to right, #33eb5b9d, rgba(170, 24, 214, 0.671));
 }
 
 .home{
@@ -61,7 +61,7 @@ body{
     color: rgb(46, 41, 41);
     border-radius: 4px;
     padding: 3px;
-    background-color: ghostwhite;
+    background-color: transparent;
     text-decoration: none;
     font-family: 'Nunito', sans-serif;
     animation: grey-to-white;
@@ -73,7 +73,7 @@ body{
     border: 1px solid rgb(46, 41, 41);
     animation: white-to-grey;
     animation-duration: 1s;
-    background-color: rgba(209, 205, 205, 0.767);
+    background-color: rgba(33, 240, 161, 0.767);
 }
 
 .header{
@@ -87,15 +87,36 @@ body{
     margin: auto;
 }
 
+@keyframes title-light{
+    from{border-radius: 2px; text-decoration-color: rgba(36, 35, 35, 0.87)}
+    to{border-radius: 4px; text-decoration-color: rgba(0, 0, 0, 0)}
+  }
 
 .title{
     font-family: 'Nunito', sans-serif;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid rgba(36, 35, 35, 0.87);
     padding: 0px 5px;
+    color: rgba(36, 35, 35, 0.87);
     text-decoration: underline;
+    text-decoration-color: rgba(0, 0, 0, 0);
     border-radius: 5px;
     font-size: 2.7em;
+    animation: title-light;
+    animation-duration: 0.5s;
+}
+
+@keyframes title-dark{
+    from{border-radius: 4px; text-decoration-color: rgba(0, 0, 0, 0);}
+    to{border-radius: 2px; text-decoration-color: rgba(36, 35, 35, 0.87);}
+  }
+
+.title:hover{
+    border-radius: 2px;
+    text-decoration-color: rgba(36, 35, 35, 0.87);
+    color: rgba(36, 35, 35, 0.87);
+    animation: title-dark;
+    animation-duration: 1s;
 }
 
 .cards{
@@ -120,7 +141,7 @@ body{
     animation: shadow-back;
     animation-duration: 1s;
     height: fit-content;
-    background-color: rgba(209, 205, 205, 0.466);
+    background-color: rgba(177, 245, 192, 0.589);
 }
 
 .card:hover{

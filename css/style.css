@@ -24,6 +24,11 @@ body{
 
 }
 
+@keyframes title-light{
+  from{color: rgba(36, 35, 35, 0.87); text-decoration-color: black}
+  to{color: rgba(66, 66, 66, 0.87); text-decoration-color: rgba(0, 0, 0, 0)}
+}
+
 .title{
   font-size: 1.7em;
   padding-top: 5px;
@@ -31,8 +36,23 @@ body{
   color: rgba(66, 66, 66, 0.87);
   font-family: 'Roboto Condensed', sans-serif;
   width: fit-content;
-  text-decoration-color: rgba(0, 0, 0, 0.562);
-  text-decoration: underline
+  text-decoration: underline;
+  text-decoration-color: rgba(0, 0, 0, 0);
+  animation: title-light;
+  animation-duration: 0.5s;
+}
+
+@keyframes title-dark{
+  from{color: rgba(66, 66, 66, 0.87); text-decoration-color: rgba(0, 0, 0, 0);}
+  to{color: rgba(36, 35, 35, 0.87); text-decoration-color: black;}
+}
+
+.title:hover{
+  color: rgba(36, 35, 35, 0.87);
+  text-decoration-color: black;
+  animation: title-dark;
+  animation-duration: 1s;
+
 }
 
 
@@ -43,7 +63,7 @@ body{
 }
 
 .menu{
-  background-color: rgba(200, 37, 233, 0.562);
+  background-color: rgba(51, 238, 60, 0.466);
   width: 175px;
   height: 100vh;
 }
@@ -54,16 +74,37 @@ body{
   height: 100vh;
 }
 
+
 .menu ul li{
   padding: 6vh 0vw;
   font-family: 'Nunito', sans-serif;
   
 }
 
+@keyframes menu-li-light{
+  from{text-decoration-color: rgba(41, 40, 40, 0.71)}
+  to{text-decoration-color: rgba(41, 40, 40, 0);}
+}
 
 .menu ul li a{
-  text-decoration: none;
   color: black;
+  text-decoration: underline;
+  text-decoration-color: rgba(41, 40, 40, 0);
+  animation: menu-li-light;
+  animation-duration: 0.5s;
+}
+
+
+@keyframes menu-li-dark{
+  from{text-decoration-color: rgba(41, 40, 40, 0);}
+  to{text-decoration-color: rgba(41, 40, 40, 0.71)}
+}
+
+.menu ul li a:hover{
+  text-decoration: underline;
+  text-decoration-color: rgba(41, 40, 40, 0.71); 
+  animation: menu-li-dark;
+  animation-duration: 0.7s;
 }
 
 .infoContainer{
@@ -71,7 +112,7 @@ body{
   width: 87vw;
   height: 100vh;
   justify-content: center;
-  background-image: linear-gradient(to bottom right, #33eb5b9d, rgba(170, 24, 214, 0.671))
+  background-image: linear-gradient(to bottom right, #33eb5b9d, rgba(170, 24, 214, 0.671));
 }
 
 .infoarea{
@@ -86,13 +127,30 @@ body{
   width: 60vw;
 }
 
+@keyframes border-vanish{
+  from{border: 0.5px solid black; border-radius: 1.8px;box-shadow: 0px 8px 16px 0px rgba(88, 88, 88, 0.63);}
+  to{border: 0px solid transparent; border-radius: 0px;box-shadow: 0px 8px 16px 0px transparent;}
+}
+
 .mypic img{
   width: 20vw;
   display: inline-block;
+  box-shadow: 0px 8px 16px 0px transparent;
+  animation: border-vanish;
+  animation-duration: 0.5s;
+}
+
+@keyframes border-show{
+  from{border: 0px solid transparent; border-radius: 0px;box-shadow: 0px 8px 16px 0px transparent;}
+  to{border: 0.5px solid black; border-radius: 1.8px;box-shadow: 0px 8px 16px 0px rgba(88, 88, 88, 0.63);}
 }
 
 .mypic img:hover{
   border: 0.5px solid black;
+  box-shadow: 0px 8px 16px 0px rgba(88, 88, 88, 0.63);
+  border-radius: 1.8px;
+  animation: border-show;
+  animation-duration: 1s;
 }
 
 #name{
@@ -123,8 +181,14 @@ body{
 }
 
 .btns{
-  margin-top: 10px;
+  margin-top: 20px;
 }
+
+@keyframes fill-light{
+  from{color: ghostwhite; background-color: black;}
+  to{color: black; background-color: transparent;}
+}
+
 .btns input{
   padding-right: 7px;
   margin-right: 20px;
@@ -139,11 +203,20 @@ body{
   font-weight: 700;
   text-decoration: underline;
   cursor: pointer;
+  animation: fill-light;
+  animation-direction: 1s;
+}
+
+@keyframes fill-dark{
+  from{color: black; background-color: transparent;}
+  to{color: ghostwhite; background-color: black;}
 }
 
 .btns input:hover{
   background-color: black;
   color: rgb(255, 255, 255);
+  animation: fill-dark;
+  animation-direction: 1s;
 }
 
 @media screen and (max-width: 800px){
