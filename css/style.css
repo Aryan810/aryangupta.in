@@ -245,3 +245,13 @@ body{
     background-image: linear-gradient(to right, #33eb5b9d, 50%  , rgba(200, 62, 241, 0.671));
   }
 }
+
+@media screen and (max-width: 315px){
+  *{
+    margin: 0% 0%;
+  }
+
+  .title{
+    font-size: 1.4em;
+  }
+}
