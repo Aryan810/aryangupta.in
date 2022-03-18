@@ -184,7 +184,6 @@ body{
 
 .card-img{
     height: 30vh;
-
 }
 
 .card-title-div{
@@ -219,9 +218,10 @@ body{
 
  
 .dropbtn {
-    color: rgb(26, 24, 24);
+    color: ghostwhite;
     padding: 16px;
     margin-bottom: 5px;
+    font-family: 'Nunito', sans-serif;
     font-size: 1.12em;
     border: none;
     width: fit-content;
@@ -230,6 +230,7 @@ body{
     background-position: left;
     transition: background-position 1s;
     box-shadow: 1px 0px 5px 1px rgba(109, 107, 107, 0.438);
+
   }
 
   .dropbtn:hover{
@@ -250,7 +251,7 @@ body{
     position: absolute;
     bottom: 50px;
     background-color: #f1f1f1;
-    min-width: 210px;
+    min-width: 70vw;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
@@ -278,7 +279,9 @@ body{
     display: block;
   }
   
-  @media screen and (max-width: 1000px){
+
+
+  @media screen and (max-width: 1100px){
     body{
         height: 100vh;
     }
@@ -290,6 +293,7 @@ body{
         width: 65vw;
         margin: 10px 20px;
     }
+
   }
 
   @media screen and (max-width: 440px){
@@ -302,7 +306,10 @@ body{
           animation: mk-small;
           animation-duration: 1s;
       }
-    
+      .card-img{
+        height: auto;
+        width: 34vw;
+    }
       .card{
         width: 80vw;
         margin: 10px 5px;
@@ -317,9 +324,34 @@ body{
       }
   }
 
+  @media screen and (max-width: 350px){
+    @keyframes mk-small {
+        from{font-size: 2em}
+        to{font-size: 1.7em}
+    }
+      .title{
+          font-size: 1.7em;
+          animation: mk-small;
+          animation-duration: 1s;
+      }
+    
+      .card{
+        width: 85vw;
+        margin: 10px 5px;
+    }
+
+      .card_text{
+        font-size: 0.7em;
+    }
+
+      .home_text{
+          font-size: 0.9em;
+      }
+  }
+
   @media screen and (max-width: 285px){
     @keyframes mk-small_new {
-        from{font-size: 2em}
+        from{font-size: 1.7em}
         to{font-size: 1.56em}
     }
       .title{
@@ -340,4 +372,30 @@ body{
           font-size: 0.7em;
       }
   }
+
+  @media screen and (max-width: 250px){
+    @keyframes mk-small_new {
+        from{font-size: 1.56em}
+        to{font-size: 1.3em}
+    }
+      .title{
+          font-size: 1.3em;
+          animation: mk-small_new;
+          animation-duration: 1s;
+      }
+
+      .card{
+        width: 91vw;
+    }
+
+      .card_text{
+          font-size: 0.7em;
+      }
+      
+      .home_text{
+          font-size: 0.6em;
+      }
+  }
+
+
 
