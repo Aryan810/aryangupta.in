@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
 
+// Circle's Intersection Area >>
+
 using namespace std;
 
 double getCircleIntersectionArea(double radiusSmall, double radiusBig, double distanceBtwCenters){
