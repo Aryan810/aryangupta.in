@@ -16,8 +16,8 @@
         45deg, 
         #845ec2, 
         #d65db1, 
-        #ff6f91, 
-        #ff9671);
+        #ff4d76, 
+        #fa8155);
 
     --gradient-btn: linear-gradient(
         45deg, 
@@ -27,6 +27,15 @@
         #ff9671, 
         #ffc75f, 
         #f9f871);
+    
+    --gradient-value: linear-gradient(
+        to right, 
+        #845ec2, 
+        #d65db1, 
+        #ff4d76, 
+        #fa8155);
+    
+
 }
 
 /* Animations */
@@ -118,6 +127,8 @@ body{
 }
 
 .info-main{
+    display: flex;
+    flex-wrap: wrap;
     height: 80vh;
     width: 80vw;
     background-color: ghostwhite;
@@ -130,4 +141,106 @@ body{
 .info-main:hover{
     box-shadow: 0px 8px 16px 0px rgba(41, 39, 39, 0.753);
 }
+
+.info-container{
+    vertical-align: middle;
+    width: fit-content;
+}
+
+.info-box{
+    height: fit-content;
+    width: 80vw;
+    margin: 1vh auto;
+    display: flex;
+}
+
+.info-box a{
+    text-decoration: underline;
+    color: transparent;
+    transition: text-decoration-color 1s;
+}
+
+.info-box a:hover{
+    text-decoration-color: rgb(46, 45, 45);
+}
+
+.key{
+    padding-top: 2vh;
+    font-size: 1.5em;
+    width: 30vw;
+    color: rgb(34, 34, 34);
+    text-align: center;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+.value{
+    color: transparent;
+    width: 50vw;
+    font-size: 2em;
+    background-image: var(--gradient-value);
+    -webkit-background-clip: text;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+}
+
+@media screen and (max-width: 870px){
+    .key{
+        font-size: 1.3em;
+    }
+    .value{
+        font-size: 1.7em;
+    }
+}
+
+@media screen and (max-width: 730px){
+    .key{
+        font-size: 1em;
+        padding-top: 1.6vh;
+    }
+    .value{
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .key{
+        font-size: 0.8em;
+        padding-top: 1vh;
+    }
+    .value{
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .key{
+        font-size: 0.7em;
+        padding-top: 1vh;
+    }
+    .value{
+        font-size: 0.85em;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .title{
+        font-size: 1.8em;
+    }
+    .title:hover{
+        font-size: 2em;
+    }
+    .info-main{
+        width: 90vw;
+    }
+    .info-box{
+        width: 90vw;
+    }
+    .key{
+        width: 35vw;
+    }
+    .value{
+        width: 55vw;
+    }
+}
+
 
