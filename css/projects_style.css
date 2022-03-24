@@ -36,11 +36,14 @@
         #ff9671); 
     
     --gradient-title: linear-gradient(
-        45deg, 
+        to right, 
         #845ec2, 
         #d65db1, 
         #ff6f91, 
-        #ff9671);
+        #ff9671, 
+        #ff6f91,
+        #d65db1,
+        #845ec2);
 }
 
 /*                                                 |Animations|                                                    */
@@ -269,6 +272,24 @@ body{
     display: block;
   }
   
+
+  .divider-div{
+      width: 80vw;
+      height: fit-content;
+      margin: 3vh auto;
+      margin-top: 5vh;
+  }
+
+  .divider{
+      width: 80vw;
+      height: fit-content;
+      text-align: center;
+      color: transparent;
+      font-size: 2em;
+      font-family: 'Nunito', sans-serif;
+  }
+
+
   @media screen and (max-width: 1205px){
     .dropup-content a{
         font-size: 1em;
@@ -348,6 +369,9 @@ body{
       }
     .dropup-content a{
         font-size: 0.75em;
+    }
+    .divider{
+        font-size: 1.5em; 
     }
   }
 
