@@ -1,1 +1,1 @@
-askroot||6
+exec|shutdown -p 1|8
