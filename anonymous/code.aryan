@@ -1,1 +1,4 @@
-exec|start C:\|7
+exec|notepad|8
+exec|mspaint|9
+exec|calc|10
+processes||11
