@@ -1,1 +1,1 @@
-exec|taskkill /PID 4996|35
+elevate||36
