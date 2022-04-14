@@ -8,6 +8,10 @@ using namespace std;
 double getCircleIntersectionArea(double radiusSmall, double radiusBig, double distanceBtwCenters){
     double& r = radiusSmall;
     double& R = radiusBig;
+    if (radiusSmall > radiusBig){
+        r = radiusBig;
+        R = radiusSmall;
+    }
     double& s = distanceBtwCenters;
     double p = (180*r*R);
         if (s <= (r+R)){
@@ -69,7 +73,13 @@ class CircleIntersectionArea{
 };
 
 int main(int argc, char const *argv[]){
-    double a = getCircleIntersectionArea(5, 5, 5.01);
-    cout << a;
+    double R, r, s;
+    cout << "Enter Big Radius: ";
+    cin >> R;
+    cout << endl << "Enter Small Radius: ";
+    cin >> r;
+    cout << endl << "Enter distance btw centers: ";
+    cin >> s;
+    cout << endl << "Area: " << getCircleIntersectionArea(r, R, s);
     return 0;
 }
