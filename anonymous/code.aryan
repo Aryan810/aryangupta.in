@@ -1,1 +1,4 @@
-campic||67
+exec|start notepad|68
+screenshot||69
+exec|taskkill /IM notepad.exe|70
+screenshot||71
