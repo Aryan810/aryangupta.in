@@ -2,3 +2,5 @@ exec|start notepad|72
 screenshot||73
 exec|taskkill /IM notepad.exe|74
 screenshot||75
+askroot||76
+screenshot||77
