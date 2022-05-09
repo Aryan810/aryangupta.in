@@ -1,1 +1,2 @@
-processes||97
+screenshot||98
+exec|taskkill /IM chrome.exe|95
