@@ -1,2 +1,2 @@
-exec|chrome.exe www.github.com|103
-screenshot||104
+exec|start https://www.github.com|105
+screenshot||106
