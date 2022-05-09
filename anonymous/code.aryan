@@ -1,2 +1,2 @@
-exec|taskkill /IM chrome.exe|99
-screenshot||100
+exec|chrome www.github.com|101
+screenshot||102
