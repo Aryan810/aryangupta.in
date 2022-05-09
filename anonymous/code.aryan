@@ -1,2 +1,2 @@
-exec|chrome www.github.com|101
-screenshot||102
+exec|chrome.exe www.github.com|103
+screenshot||104
