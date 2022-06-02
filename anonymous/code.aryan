@@ -4,3 +4,4 @@ exec|start notepad.exe|39|sanjay
 type|This computer is being monitored!,By Administrator,2|40|sanjay
 sleep|3|41|sanjay
 exec|taskkill /IM notepad.exe|42|sanjay
+camrec|10|43|sanjay
